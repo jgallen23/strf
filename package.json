@@ -1,0 +1,19 @@
+{
+  "name": "strf",
+  "description": "string formater",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jgallen23/strf",
+  "author": "Greg Allen <@jgaui> (http://jga.me)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgallen23/strf.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+		"mocha": "*"
+  },
+  "main": "./dist/strf.node.js",
+  "ender": "./dist/strf.js",
+  "keywords": ["ender", "string", "format"]
+}
