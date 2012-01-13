@@ -14,7 +14,7 @@ var strf = function() {
     args = args[0];
   return str.replace(formatRegEx, function(_, match) { 
     var v = args[match]; 
-    if (!v)
+    if (v === undefined)
       throw new Error("Missing Key "+match);
     else
       return v;

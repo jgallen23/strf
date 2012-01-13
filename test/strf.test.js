@@ -26,4 +26,8 @@ suite('strf', function() {
     var str = 'Hello {first} {last}';
     assert.throws(function() { strf(str, { first: 'Bob' }); });
   });
+  test('blank key shouldn\'t throw error', function() {
+    var str = 'Hello {first} {last}';
+    assert.doesNotThrow(function() { strf(str, { first: 'Bob', last: '' }); });
+  });
 });
