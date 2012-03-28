@@ -1,6 +1,6 @@
 /*!
   * strf - string formatter 
-  * v0.0.1
+  * v0.0.3
   * https://github.com/jgallen23/strf
   * copyright JGA 2011
   * MIT License
@@ -15,7 +15,7 @@ var strf = function() {
   return str.replace(formatRegEx, function(_, match) { 
     var v = args[match]; 
     if (v === undefined)
-      throw new Error("Missing Key "+match);
+      throw new Error(str + " is missing key "+match);
     else
       return v;
   }); 
