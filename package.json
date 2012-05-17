@@ -1,7 +1,7 @@
 {
   "name": "strf",
   "description": "string formater",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "https://github.com/jgallen23/strf",
   "author": "Greg Allen <@jgaui> (http://jga.me)",
   "repository": {
