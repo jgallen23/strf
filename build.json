@@ -4,11 +4,6 @@
     "strf": [
       "./lib/copyright.js",
       "./lib/strf.js"
-    ],
-    "strf.node": [
-      "./lib/copyright.js",
-      "./lib/strf.js",
-      "./lib/exports.js"
     ]
   },
   "JSHINT_OPTS": {

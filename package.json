@@ -13,7 +13,6 @@
   "devDependencies": {
 		"mocha": "*"
   },
-  "main": "./dist/strf.node.js",
   "ender": "./dist/strf.js",
   "keywords": ["ender", "string", "format"]
 }

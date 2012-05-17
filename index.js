@@ -1,1 +1,1 @@
-module.exports = require('./dist/strf.node');
+module.exports = require('./lib/strf');

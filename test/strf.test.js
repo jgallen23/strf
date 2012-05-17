@@ -30,4 +30,14 @@ suite('strf', function() {
     var str = 'Hello {first} {last}';
     assert.doesNotThrow(function() { strf(str, { first: 'Bob', last: '' }); });
   });
+
+  test('nested keys', function() {
+    var str = 'Hello {name.first}';
+    assert.equal('Hello Bob', strf(str, { name: { first: 'Bob', last: 'Barker' } }));
+  });
+
+  test('mixed nested keys and non', function() {
+    var str = 'Hello {name.first}, my name is {otherName}';
+    assert.equal('Hello Bob, my name is Jane', strf(str, { name: { first: 'Bob', last: 'Barker' }, otherName: 'Jane' }));
+  });
 });
