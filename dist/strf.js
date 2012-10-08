@@ -1,8 +1,8 @@
 /*!
   * strf - string formatter 
-  * v0.0.3
+  * v0.1.0
   * https://github.com/jgallen23/strf
-  * copyright JGA 2011
+  * copyright JGA 2012
   * MIT License
   */
 
@@ -13,10 +13,16 @@ var strf = function() {
   if (args.length == 1 && typeof args[0] === "object")
     args = args[0];
   return str.replace(formatRegEx, function(_, match) { 
-    var v = args[match]; 
-    if (v === undefined)
+    var key = match.split('.');
+    var v = args;
+    for (var i = 0; i < key.length; i++) {
+       v = v[key[i]]; 
+    }
+    if (v === undefined) {
       throw new Error(str + " is missing key "+match);
-    else
+    } else {
       return v;
+    }
   }); 
 };
+if (typeof module != 'undefined' && module.exports) module.exports = strf;
